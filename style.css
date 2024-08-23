@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que el contenido esté centrado verticalmente */
+    margin: 0;
+    background-color: #f0f0f0; /* Fondo opcional para hacer que el calendario resalte */
+}
+
+.container_calendar {
+    width: 320px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.header_calendar {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header_calendar h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.header_calendar h5 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: normal;
+}
+
+.body_calendar {
+    padding: 20px;
+}
+
+.container_change_month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container_change_month button {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #4a90e2;
+    cursor: pointer;
+}
+
+.container_change_month div {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.container_weedays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.container_days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.week_days_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Ajusta la altura si es necesario */
+    width: 100%;
+}
+
+.prev_days, .next_month_days {
+    opacity: 0.5;
+}
+
+.today {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white; /* Para que el texto dentro del círculo sea blanco */
+    background: #4a90e2; /* Fondo rojo para el círculo */
+    border-radius: 50%; /* Hacer el fondo redondo */
+    width: 40px; /* Ajusta el tamaño del círculo */
+    height: 40px; /* Ajusta el tamaño del círculo */
+    line-height: 40px; /* Alinear el texto verticalmente */
+    font-weight: bold; /* Hacer el texto negrita si es necesario */
+}
+
+.today::after {
+    content: ""; /* Vacío porque el círculo ya está establecido con background */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #4a90e2; /* Bordear el círculo con un borde rojo */
+    z-index: -1; /* Coloca el borde debajo del texto */
+}
