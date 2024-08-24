@@ -6,7 +6,7 @@
 Este sitio web te permite ver el día de hoy en un calendario, en la parte posterior se visualiza el día y el mes. Además cuenta con dos botones que indican el siguiente mes y el mes anterior respectivamente.
 <h2>💻 Deploy</h2>
 
-[Calendario](https://calendario.github.io)
+[Calendario](https://calendario-angel.netlify.app)
 
 <h2>👨🏻‍💻 Requerimientos</h2>
 <ul>
